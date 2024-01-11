@@ -9,6 +9,10 @@ const Home = () => {
     // let lbMainLift = mainLiftLB[Math.floor(Math.random() * mainLiftLB.length)];
     // let lbHCL = heavyCompoundLiftLB[Math.floor(Math.random() * heavyCompoundLiftLB.length)];
 
+    function refreshPage() {
+      window.location.reload(false);
+    }
+
     class Exercise {
         constructor (exercises) {
           this.exercisename = exercises;
@@ -41,6 +45,7 @@ const Home = () => {
           <p>B2: {verticalPush.random()} </p>
           <p>C1: {supplementOneLB.random()} </p>
           <p>C2: {verticalHorzPull.random()} </p>
+          <p>D1: {} </p>
           </div>
 
           <div style ={{border: "1px solid blue", margin: "20px"}} >
@@ -53,7 +58,7 @@ const Home = () => {
           <p>C2: {verticalHorzPull.random()} </p>
           </div>
           </div>
-          <button onClick>Click ME!</button>
+          <button onClick={refreshPage}>Click ME!</button>
           </div>
     )
 }
